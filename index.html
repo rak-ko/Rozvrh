@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Timetable</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 110 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+</head>
+<body>
+    <div id="main">
+        <div id="weekPicker">
+            <button type="button" class="weekPickerButton" id="weekMinus">⬅️</button>
+            <button id="weekInfo" title="Reset to current week">Week Start - End</button>
+            <button type="button" class="weekPickerButton" id="weekPlus">➡️</button>
+        </div>
+        <table id="timetable">
+        </table>
+        <div id="legend">
+            <h3>Legend:</h3>
+            <p id="classRequired">🥲 Attendance required</p>
+            <p id="classStudy">😟 Attendance not required - Studying required</p>
+            <p id="classNotRequired">😀 Attendance not required - Studying not required</p>
+            <p style="background-color: lightblue;">❗ 💼 ← Usually has homework</p>
+            <p id="classUnknown">❓ Not enough info</p>
+        </div>
+    </div>
+    <script type="text/javascript" src='index.js'></script>
+</body>
+</html>
