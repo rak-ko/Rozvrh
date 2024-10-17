@@ -50,9 +50,11 @@ async function Render(week)
                         else if(notRequired) { id = "classNotRequired"; }
                         else if(unknown) { id = "classUnknown"; }
 
-                        daysString += `<td id="`+id+`" class="timetableBorder class" colspan="`+ _class["Span"] +`" title="`+_class["Name"]+`" >
-                            <p>`+ _class["Name"] +`</p>
-                            <p class="classInfo">`+ _class["Info"] +`</p>
+                        daysString += `<td id="`+id+`" class="timetableBorder class" colspan="`+ _class["Span"] +`">
+                            <button title="`+_class["Name"]+`">
+                                <p>`+ _class["Name"] +`</p>
+                                <p class="classInfo">`+ _class["Info"] +`</p>
+                            </button>
                         </td>`;
                         ignoreColumnCount = _class["Span"] - 1;
                         renderedClass = true;

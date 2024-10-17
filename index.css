@@ -84,10 +84,26 @@ table th, td {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
     transition: 0.05s filter ease-out;
 }
+.class button {
+    background: none;
+    border: none;
+    padding: 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 17.3px;
+}
 .class p {
     margin: 0px 0px;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 100%;
 }
 .classInfo {
     text-align: right;
