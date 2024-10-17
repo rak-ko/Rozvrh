@@ -79,15 +79,15 @@ table th, td {
 }
 .class {
     cursor: pointer;
-    padding: 7px 14px;
     border: none;
+    padding: 0px 0px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
     transition: 0.05s filter ease-out;
 }
 .class button {
     background: none;
     border: none;
-    padding: 0px 0px;
+    padding: 7px 14px;
 
     display: flex;
     flex-direction: column;
@@ -163,5 +163,5 @@ body.touched [title]:hover:after {
 	background-color: white;
 	box-shadow: 1px 1px 3px;
 	padding: 0.3em;
-	z-index: 1;
+	z-index: 5 !important;
 }
