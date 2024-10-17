@@ -24,7 +24,7 @@ async function Render(week)
         const day = days[i];
         daysString += "<tr>";
         daysString += "<th class=\"timetableBorder\">"+ day["Name"] +"</th>"
-        
+
         //Classes
         const classes = day["Classes"];
         classes.sort((a, b) => a["Start"] - b["Start"])
@@ -37,24 +37,27 @@ async function Render(week)
             if(classArrayIndex < classes.length)
             {
                 const _class = classes[classArrayIndex];
-                const required = _class["WeeksRequired"].includes(week);
-                const studying = _class["WeeksStudying"].includes(week);
-                const notRequired = _class["WeeksNotRequired"].includes(week);
-                const unknown = _class["WeeksUnknown"].includes(week);
-                if(_class["Start"] == e && (required || studying || notRequired || unknown))
+                if(_class["Start"] == e)
                 {
-                    var id = "classRequired";
-                    if(studying) { id = "classStudy"; }
-                    else if(notRequired) { id = "classNotRequired"; }
-                    else if(unknown) { id = "classUnknown"; }
+                    const required = _class["WeeksRequired"].includes(week);
+                    const studying = _class["WeeksStudying"].includes(week);
+                    const notRequired = _class["WeeksNotRequired"].includes(week);
+                    const unknown = _class["WeeksUnknown"].includes(week);
+                    if(required || studying || notRequired || unknown)
+                    {
+                        var id = "classRequired";
+                        if(studying) { id = "classStudy"; }
+                        else if(notRequired) { id = "classNotRequired"; }
+                        else if(unknown) { id = "classUnknown"; }
 
-                    daysString += `<td id="`+id+`" class="timetableBorder class" colspan="`+ _class["Span"] +`" title="`+_class["Name"]+`" >
-                        <p>`+ _class["Name"] +`</p>
-                        <p class="classInfo">`+ _class["Info"] +`</p>
-                    </td>`;
-                    ignoreColumnCount = _class["Span"] - 1;
+                        daysString += `<td id="`+id+`" class="timetableBorder class" colspan="`+ _class["Span"] +`" title="`+_class["Name"]+`" >
+                            <p>`+ _class["Name"] +`</p>
+                            <p class="classInfo">`+ _class["Info"] +`</p>
+                        </td>`;
+                        ignoreColumnCount = _class["Span"] - 1;
+                        renderedClass = true;
+                    }
                     classArrayIndex++;
-                    renderedClass = true;
                 }
             }
 
@@ -80,7 +83,7 @@ function UpdateWeek(updateBy)
     date = new Date(weekStart);
     date.setDate(date.getDate() + curWeek * 7);
     const from = date.toWeekString();
-    date.setDate(date.getDate() + 3);
+    date.setDate(date.getDate() + 4);
     const to = date.toWeekString();
     document.getElementById("weekInfo").innerHTML = from + "  —  " + to;
 
@@ -123,3 +126,8 @@ document.getElementById("weekInfo").addEventListener("click", () => { UpdateWeek
 
 //First render
 UpdateWeek(0);
+
+//Tooltip
+document.body.addEventListener('touchstart', function() {
+    document.body.classList.add('touched');
+});
