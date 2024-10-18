@@ -1,6 +1,23 @@
+:root {
+    --main-color: white;
+    --table-background-color: rgb(247, 247, 247);
+    --table-border-color: gray;
+    --table-border-inside-color: rgb(167, 167, 167);
+    --text-color: black;
+    --info-text-color: rgba(0, 0, 0, 0.65);
+    --required: rgb(255, 169, 169);
+    --studying: rgb(255, 228, 110);
+    --not-required: rgb(159, 255, 159);
+    --homework: lightblue;
+    --no-info: rgb(255, 196, 240);
+    --week-info-background-hover: lightgray;
+    --week-info-background-active: gray;
+}
 body {
     margin: 0px 0px;
     font-family: sans-serif;
+    color: var(--text-color);
+    background-color: var(--main-color);
 }
 #main
 {
@@ -28,12 +45,15 @@ body {
     align-items: center;
     justify-content: center;
 }
+#weekPicker button {
+    color: var(--text-color);
+}
 #weekPicker button:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: var(--week-info-background-hover);
 }
 #weekPicker button:active {
-    background-color: gray;
+    background-color: var(--week-info-background-active);
 }
 #weekInfo {
     background-color: transparent;
@@ -46,13 +66,6 @@ body {
     width: 225px;
     text-align: center;
 }
-#weekInfo:hover {
-    cursor: pointer;
-    background-color: lightgray;
-}
-#weekInfo:active {
-    background-color: gray;
-}
 
 table {
     min-width: 1200px;
@@ -60,8 +73,11 @@ table {
     border-spacing: 6px;
     border-radius: 5px;
 
-    border: 1.5px solid gray;
-    background-color: rgb(247, 247, 247);
+    border: 1.5px solid var(--table-border-color);
+    background-color: var(--table-background-color);
+}
+table tr {
+    height: 52px;
 }
 table th, td {
     padding: 7px 7px;
@@ -75,7 +91,7 @@ table th, td {
     border-radius: 5px;
 }
 .timetableBorder {
-    border: 1.5px solid rgb(167, 167, 167);
+    border: 1.5px solid var(--table-border-inside-color);
 }
 .class {
     cursor: pointer;
@@ -104,27 +120,31 @@ table th, td {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
+    color: var(--text-color);
 }
 .classInfo {
     text-align: right;
     font-size: 13px;
-    color: rgba(0, 0, 0, 0.65);
+    color: var(--info-text-color) !important;
 }
 .class:hover {
     filter: brightness(90%);
 }
 
 #classRequired {
-    background-color: rgb(255, 169, 169);
+    background-color: var(--required);
 }
 #classStudy {
-    background-color: rgb(255, 228, 110);
+    background-color: var(--studying);
 }
 #classNotRequired {
-    background-color: rgb(159, 255, 159);
+    background-color: var(--not-required);
 }
 #classUnknown {
-    background-color: rgb(255, 196, 240);
+    background-color: var(--no-info);
+}
+#classHomework {
+    background-color: var(--homework);
 }
 
 #legend {
@@ -145,23 +165,9 @@ table th, td {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-[title] {
-	position: relative;
-}
-body.touched [title] > * {
-	user-select: none;
-}
-body.touched [title]:hover > * {
-	user-select: auto
-}
-body.touched [title]:hover:after {
-	position: absolute;
-	top: 100%;
-	right: -10%;
-	content: attr(title);
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	background-color: white;
-	box-shadow: 1px 1px 3px;
-	padding: 0.3em;
-	z-index: 5 !important;
+#lightDarkModeSwitch {
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    border-radius: 4px;
 }

@@ -50,8 +50,9 @@ async function Render(week)
                         else if(notRequired) { id = "classNotRequired"; }
                         else if(unknown) { id = "classUnknown"; }
 
-                        daysString += `<td id="`+id+`" class="timetableBorder class" colspan="`+ _class["Span"] +`">
-                            <button title="`+_class["Name"]+`">
+                        // title="`+_class["Name"]+`"
+                        daysString += `<td id="`+id+`" class="timetableBorder class" colspan="`+ _class["Span"] +`" title="`+ _class["Name"] +`">
+                            <button onclick="alert('`+ _class["Name"] +`')">
                                 <p>`+ _class["Name"] +`</p>
                                 <p class="classInfo">`+ _class["Info"] +`</p>
                             </button>
@@ -116,6 +117,48 @@ Date.prototype.toWeekString = function()
     return dd + ". " + mm + ". " + year;
 };
 
+function SetLightDarkMode(lightModeOn)
+{
+    if(lightModeOn)
+    {
+        document.getElementById("lightDarkModeSwitch").innerHTML = "🌘";
+
+        document.documentElement.style.setProperty("--main-color", "white");
+        document.documentElement.style.setProperty("--table-background-color", "rgb(247, 247, 247)");
+        document.documentElement.style.setProperty("--table-border-color", "gray");
+        document.documentElement.style.setProperty("--table-border-inside-color", "rgb(167, 167, 167)");
+        document.documentElement.style.setProperty("--text-color", "black");
+        document.documentElement.style.setProperty("--info-text-color", "rgba(0, 0, 0, 0.65)");
+        document.documentElement.style.setProperty("--required", "rgb(255, 169, 169)");
+        document.documentElement.style.setProperty("--studying", "rgb(255, 228, 110)");
+        document.documentElement.style.setProperty("--not-required", "rgb(159, 255, 159)");
+        document.documentElement.style.setProperty("--homework", "lightblue");
+        document.documentElement.style.setProperty("--no-info", "rgb(255, 196, 240)");
+        document.documentElement.style.setProperty("--week-info-background-hover", "lightgray");
+        document.documentElement.style.setProperty("--week-info-background-active", "gray");
+    }
+    else
+    {
+        document.getElementById("lightDarkModeSwitch").innerHTML = "☀️";
+
+        document.documentElement.style.setProperty("--main-color", "#181a1b");
+        document.documentElement.style.setProperty("--table-background-color", "rgb(29, 31, 32)");
+        document.documentElement.style.setProperty("--table-border-color", "rgb(84, 91, 94)");
+        document.documentElement.style.setProperty("--table-border-inside-color", "#494f52");
+        document.documentElement.style.setProperty("--text-color", "white");
+        document.documentElement.style.setProperty("--info-text-color", "rgba(232, 230, 227, 0.65)");
+        document.documentElement.style.setProperty("--required", "rgb(103, 0, 0)");
+        document.documentElement.style.setProperty("--studying", "rgb(104, 84, 0)");
+        document.documentElement.style.setProperty("--not-required", "rgb(27, 109, 0)");
+        document.documentElement.style.setProperty("--homework", "#1b4958");
+        document.documentElement.style.setProperty("--no-info", "rgb(86, 0, 64)");
+        document.documentElement.style.setProperty("--week-info-background-hover", "rgb(51, 51, 51)");
+        document.documentElement.style.setProperty("--week-info-background-active", "rgb(37, 37, 37)");
+    }
+    isLightModeOn = lightModeOn;
+    localStorage.setItem("isLightModeOn", isLightModeOn);
+}
+
 //Get current week & hook up buttons
 const weekStart = new Date(2024, 8, 30);
 const weekMax = 12;
@@ -129,7 +172,8 @@ document.getElementById("weekInfo").addEventListener("click", () => { UpdateWeek
 //First render
 UpdateWeek(0);
 
-//Tooltip
-document.body.addEventListener('touchstart', function() {
-    document.body.classList.add('touched');
-});
+//Light/Dark mode switcher
+var isLightModeOn = (localStorage.getItem("isLightModeOn") === 'true');
+if(isLightModeOn == null) { isLightModeOn = true; }
+SetLightDarkMode(isLightModeOn);
+document.getElementById("lightDarkModeSwitch").addEventListener("click", () => { SetLightDarkMode(!isLightModeOn); });
