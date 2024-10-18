@@ -1,18 +1,3 @@
-:root {
-    --main-color: white;
-    --table-background-color: rgb(247, 247, 247);
-    --table-border-color: gray;
-    --table-border-inside-color: rgb(167, 167, 167);
-    --text-color: black;
-    --info-text-color: rgba(0, 0, 0, 0.65);
-    --required: rgb(255, 169, 169);
-    --studying: rgb(255, 228, 110);
-    --not-required: rgb(159, 255, 159);
-    --homework: lightblue;
-    --no-info: rgb(255, 196, 240);
-    --week-info-background-hover: lightgray;
-    --week-info-background-active: gray;
-}
 body {
     margin: 0px 0px;
     font-family: sans-serif;
@@ -156,7 +141,7 @@ table th, td {
 #legend h3 {
     margin-bottom: 10px;
 }
-#legend p {
+.legendElement {
     padding: 5px 10px;
     margin: 0px 0px;
     margin-bottom: 8px;
@@ -165,6 +150,21 @@ table th, td {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+#legendSymbols {
+    background-color: var(--homework);
+    padding: 10px 15px;
+    padding-left: 10px;
+    margin-top: 6px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#legendSymbols p {
+    margin: 0px;
+    white-space: pre;
+}
+
 
 #lightDarkModeSwitch {
     background-color: transparent;

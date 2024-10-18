@@ -104,9 +104,14 @@ function DiffWeeks(dt2, dt1)
 }
 function GetMonday(d) 
 {
-    d = new Date(d);
+    var tmp = d;
+    d = new Date();
+    var distance = tmp - d.getDay();
+    d.setDate(d.getDate() + distance);
+
     var day = d.getDay(),
         diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
+    d.setDate(diff)
     return new Date(d.setDate(diff));
 }
 Date.prototype.toWeekString = function() 
@@ -129,11 +134,13 @@ function SetLightDarkMode(lightModeOn)
         document.documentElement.style.setProperty("--table-border-inside-color", "rgb(167, 167, 167)");
         document.documentElement.style.setProperty("--text-color", "black");
         document.documentElement.style.setProperty("--info-text-color", "rgba(0, 0, 0, 0.65)");
+
         document.documentElement.style.setProperty("--required", "rgb(255, 169, 169)");
         document.documentElement.style.setProperty("--studying", "rgb(255, 228, 110)");
-        document.documentElement.style.setProperty("--not-required", "rgb(159, 255, 159)");
-        document.documentElement.style.setProperty("--homework", "lightblue");
-        document.documentElement.style.setProperty("--no-info", "rgb(255, 196, 240)");
+        document.documentElement.style.setProperty("--not-required", "#79de79");
+        document.documentElement.style.setProperty("--no-info", "#C3B1E1");
+        document.documentElement.style.setProperty("--homework", "#a8e4ef");
+
         document.documentElement.style.setProperty("--week-info-background-hover", "lightgray");
         document.documentElement.style.setProperty("--week-info-background-active", "gray");
     }
@@ -161,8 +168,9 @@ function SetLightDarkMode(lightModeOn)
 
 //Get current week & hook up buttons
 const weekStart = new Date(2024, 8, 30);
-const weekMax = 12;
-const curWeekActual = DiffWeeks(GetMonday(new Date()), weekStart);;
+const weekMax = 13;
+var curWeekActual = DiffWeeks(GetMonday(new Date().getDay()), weekStart);
+if(new Date().getDay() > 5) { curWeekActual++; } //It's the weekend -> Skip to next week
 
 var curWeek = curWeekActual
 document.getElementById("weekMinus").addEventListener("click", () => { UpdateWeek(-1); });
