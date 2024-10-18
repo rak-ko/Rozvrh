@@ -21,7 +21,7 @@
                     "Info": "✏️🗓️💼 N11",
                     "Start": 3,
                     "Span": 1,
-                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -31,7 +31,7 @@
                     "Info": "✏️🗓️💼 N11",
                     "Start": 4,
                     "Span": 2,
-                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -41,7 +41,7 @@
                     "Info": "✏️ N4",
                     "Start": 6,
                     "Span": 2,
-                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -51,7 +51,7 @@
                     "Info": "✏️ N6",
                     "Start": 8,
                     "Span": 2,
-                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -69,7 +69,7 @@
                     "WeeksRequired": [0, 2],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [1, 3],
-                    "WeeksUnknown": [4, 6, 7, 8, 9, 10, 11, 13]
+                    "WeeksUnknown": [4, 6, 7, 8, 9, 10, 11, 14]
                 },
                 {
                     "Name": "Programování 1",
@@ -78,7 +78,7 @@
                     "Span": 2,
                     "WeeksRequired": [],
                     "WeeksStudying": [],
-                    "WeeksNotRequired": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksNotRequired": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksUnknown": []
                 },
                 { 
@@ -87,7 +87,7 @@
                     "Start": 6,
                     "Span": 2,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
@@ -97,7 +97,7 @@
                     "Start": 8,
                     "Span": 2,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 }
@@ -111,7 +111,7 @@
                     "Info": "✏️🗓️ Areál Hostivař",
                     "Start": 0,
                     "Span": 2,
-                    "WeeksRequired": [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksRequired": [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -123,7 +123,7 @@
                     "Span": 2,
                     "WeeksRequired": [],
                     "WeeksStudying": [],
-                    "WeeksNotRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksNotRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksUnknown": []
                 },
                 { 
@@ -134,7 +134,7 @@
                     "WeeksRequired": [],
                     "WeeksStudying": [1, 2, 4, 5, 6, 7, 8],
                     "WeeksNotRequired": [0],
-                    "WeeksUnknown": [9, 10, 11, 13]
+                    "WeeksUnknown": [9, 10, 11, 14]
                 },
                 {
                     "Name": "Matematické Problémy Nematematiků",
@@ -157,7 +157,7 @@
                     "Start": 4,
                     "Span": 2,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
@@ -166,7 +166,7 @@
                     "Info": "✏️🗓️💼 N6",
                     "Start": 6,
                     "Span": 2,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []

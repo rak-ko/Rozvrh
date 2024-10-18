@@ -168,7 +168,7 @@ function SetLightDarkMode(lightModeOn)
 
 //Get current week & hook up buttons
 const weekStart = new Date(2024, 8, 30);
-const weekMax = 13;
+const weekMax = 14;
 var curWeekActual = DiffWeeks(GetMonday(new Date().getDay()), weekStart);
 if(new Date().getDay() > 5) { curWeekActual++; } //It's the weekend -> Skip to next week
 
