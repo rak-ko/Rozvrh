@@ -170,7 +170,8 @@ function SetLightDarkMode(lightModeOn)
 const weekStart = new Date(2024, 8, 30);
 const weekMax = 14;
 var curWeekActual = DiffWeeks(GetMonday(new Date().getDay()), weekStart);
-if(new Date().getDay() > 5) { curWeekActual++; } //It's the weekend -> Skip to next week
+const curWeekDay = new Date().getDay();
+if(curWeekDay > 5 || curWeekDay == 0) { curWeekActual++; } //It's the weekend -> Skip to next week
 
 var curWeek = curWeekActual
 document.getElementById("weekMinus").addEventListener("click", () => { UpdateWeek(-1); });
