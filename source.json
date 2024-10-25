@@ -157,7 +157,7 @@
                     "Start": 4,
                     "Span": 2,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 14],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
@@ -166,7 +166,7 @@
                     "Info": "✏️🗓️💼 N6",
                     "Start": 6,
                     "Span": 2,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 14],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
