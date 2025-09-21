@@ -159,6 +159,16 @@ function SetLightDarkMode(lightModeOn)
     localStorage.setItem("isLightModeOn", isLightModeOn);
 }
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then((registration) => {
+      console.log('Service Worker registered with scope:', registration.scope);
+    })
+    .catch((error) => {
+      console.error('Service Worker registration failed:', error);
+    });
+}
+
 //Get current week & hook up buttons
 const today = new Date(2025, 8, 22); //! CLEAR THIS
 const weekStart = new Date(2025, 8, 22);
