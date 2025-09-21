@@ -28,15 +28,12 @@ async function Render(week)
         //Classes
         const classes = day["Classes"];
         classes.sort((a, b) => a["Start"] - b["Start"])
-        var classArrayIndex = 0;
-        var ignoreColumnCount = 0;
         for (let e = 0; e < hours.length; e++) {
             var renderedClass = false;
 
             //Class
-            if(classArrayIndex < classes.length)
-            {
-                const _class = classes[classArrayIndex];
+            for (let g = 0; g < classes.length; g++) {
+                const _class = classes[g];
                 if(_class["Start"] == e)
                 {
                     const required = _class["WeeksRequired"].includes(week);
@@ -51,25 +48,19 @@ async function Render(week)
                         else if(unknown) { id = "classUnknown"; }
 
                         // title="`+_class["Name"]+`"
-                        daysString += `<td id="`+id+`" class="timetableBorder class" colspan="`+ _class["Span"] +`" title="`+ _class["Name"] +`">
+                        daysString += `<td id="`+id+`" class="timetableBorder class" title="`+ _class["Name"] +`">
                             <button onclick="alert('`+ _class["Name"] +`')">
                                 <p>`+ _class["Name"] +`</p>
                                 <p class="classInfo">`+ _class["Info"] +`</p>
                             </button>
                         </td>`;
-                        ignoreColumnCount = _class["Span"] - 1;
                         renderedClass = true;
                     }
-                    classArrayIndex++;
                 }
             }
 
             //Empty cell
-            if(!renderedClass)
-            {
-                if(ignoreColumnCount <= 0) { daysString += "<td></td>"; }
-                else { ignoreColumnCount--; }
-            }
+            if(!renderedClass) { daysString += "<td></td>"; }
         }
         daysString += "</tr>";
     }
@@ -92,20 +83,22 @@ function UpdateWeek(updateBy)
 
     Render(curWeek);
 }
-
+Number.prototype.clamp = function(min, max) {
+  return Math.min(Math.max(this, min), max);
+};
 function DiffWeeks(dt2, dt1) 
 {
     // Calculate the difference in milliseconds between dt2 and dt1
     var diff =(dt2.getTime() - dt1.getTime()) / 1000;
     // Convert the difference from milliseconds to weeks by dividing it by the number of milliseconds in a week
     diff /= (60 * 60 * 24 * 7);
-    // Return the absolute value of the rounded difference as the result
-    return Math.abs(Math.round(diff));
+    // Return the rounded difference as the result
+    return Math.round(diff); //? Clamping introduces an issue with weekend skipping and it seems to work without it so 🤷
 }
-function GetMonday(d) 
+function GetMonday(d)
 {
     var tmp = d;
-    d = new Date();
+    d = new Date(today);
     var distance = tmp - d.getDay();
     d.setDate(d.getDate() + distance);
 
@@ -167,10 +160,11 @@ function SetLightDarkMode(lightModeOn)
 }
 
 //Get current week & hook up buttons
-const weekStart = new Date(2024, 8, 30);
-const weekMax = 14;
-var curWeekActual = DiffWeeks(GetMonday(new Date().getDay()), weekStart);
-const curWeekDay = new Date().getDay();
+const today = new Date(2025, 8, 22);
+const weekStart = new Date(2025, 8, 22);
+const weekMax = 15; //? There's 16 weeks altogether so max index is 15
+var curWeekActual = DiffWeeks(GetMonday(today.getDay()), weekStart);
+const curWeekDay = today.getDay();
 if(curWeekDay > 5 || curWeekDay == 0) { curWeekActual++; } //It's the weekend -> Skip to next week
 
 var curWeek = curWeekActual
