@@ -160,7 +160,7 @@ function SetLightDarkMode(lightModeOn)
 }
 
 //Get current week & hook up buttons
-const today = new Date(2025, 8, 22);
+const today = new Date(2025, 8, 22); //! CLEAR THIS
 const weekStart = new Date(2025, 8, 22);
 const weekMax = 15; //? There's 16 weeks altogether so max index is 15
 var curWeekActual = DiffWeeks(GetMonday(today.getDay()), weekStart);
@@ -178,5 +178,6 @@ UpdateWeek(0);
 //Light/Dark mode switcher
 var isLightModeOn = (localStorage.getItem("isLightModeOn") === 'true');
 if(isLightModeOn == null) { isLightModeOn = true; }
+if(today.getHours() >= 17) { isLightModeOn = false; } // Auto light mode
 SetLightDarkMode(isLightModeOn);
 document.getElementById("lightDarkModeSwitch").addEventListener("click", () => { SetLightDarkMode(!isLightModeOn); });
