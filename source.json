@@ -17,27 +17,27 @@
                     "Info": "👂 T2:D3-209",
                     "Start": 1,
                     "WeeksRequired": [0],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 11, 12, 15]
+                    "WeeksUnknown": []
                 },
                 { 
                     "Name": "Elektronika a komunikace prakticky",
                     "Info": "👂 T2:D3-309",
                     "Start": 3,
                     "WeeksRequired": [0],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 11, 12, 15]
+                    "WeeksUnknown": []
                 },
                 { 
                     "Name": "Lineární algebra",
                     "Info": "👂 T4:D2-256",
                     "Start": 5,
                     "WeeksRequired": [0],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 11, 12, 15]
+                    "WeeksUnknown": []
                 },
                 { 
                     "Name": "Základní školení BOZP",
@@ -52,9 +52,9 @@
                     "Name": "Základní školení BOZP",
                     "Info": "✏️ T4:D2-256",
                     "Start": 6,
-                    "WeeksRequired": [1, 2, 4, 5, 6],
+                    "WeeksRequired": [1, 4],
                     "WeeksStudying": [],
-                    "WeeksNotRequired": [],
+                    "WeeksNotRequired": [2, 5, 6],
                     "WeeksUnknown": []
                 }
             ]
@@ -76,9 +76,9 @@
                     "Info": "👂 T2:D3-209",
                     "Start": 2,
                     "WeeksRequired": [0],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15]
+                    "WeeksUnknown": []
                 }
             ]
         },
@@ -87,7 +87,7 @@
             "Classes" : [
                 { 
                     "Name": "Procedurální programování",
-                    "Info": "✏️ T2:A4-405",
+                    "Info": "💼 ✏️ T2:A4-405",
                     "Start": 0,
                     "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15],
                     "WeeksStudying": [],
@@ -99,18 +99,18 @@
                     "Info": "👂 T2:D3-209",
                     "Start": 1,
                     "WeeksRequired": [0],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15]
+                    "WeeksUnknown": []
                 },
                 { 
                     "Name": "Lineární algebra",
                     "Info": "👂 T4:D2-256",
                     "Start": 2,
                     "WeeksRequired": [0],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15]
+                    "WeeksUnknown": []
                 },
                 { 
                     "Name": "Datové sítě",
@@ -123,7 +123,7 @@
                 },
                 { 
                     "Name": "Matematická analýza",
-                    "Info": "✏️ T2:C3-52",
+                    "Info": "💼 ✏️ T2:C3-52",
                     "Start": 4,
                     "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15],
                     "WeeksStudying": [],
@@ -155,7 +155,7 @@
                 },
                 { 
                     "Name": "Datové sítě",
-                    "Info": "✏️ T2:B3-703",
+                    "Info": "💼 ✏️ T2:B3-703",
                     "Start": 3,
                     "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15],
                     "WeeksStudying": [],

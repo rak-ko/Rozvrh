@@ -170,7 +170,7 @@ if ('serviceWorker' in navigator) {
 }
 
 //Get current week & hook up buttons
-const today = new Date(2025, 8, 22); //! CLEAR THIS
+const today = new Date();
 const weekStart = new Date(2025, 8, 22);
 const weekMax = 15; //? There's 16 weeks altogether so max index is 15
 var curWeekActual = DiffWeeks(GetMonday(today.getDay()), weekStart);
