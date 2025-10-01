@@ -95,17 +95,18 @@ function DiffWeeks(dt2, dt1)
     // Return the rounded difference as the result
     return Math.round(diff); //? Clamping introduces an issue with weekend skipping and it seems to work without it so 🤷
 }
-function GetMonday(d)
+function GetMonday(_today)
 {
-    var tmp = d;
-    d = new Date(today);
-    var distance = tmp - d.getDay();
-    d.setDate(d.getDate() + distance);
+    // Get day index starting from monday
+    var day = _today.getDay();
+    if(day == 0) { day = 6; }
+    else { day--; }
 
-    var day = d.getDay(),
-        diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
-    d.setDate(diff)
-    return new Date(d.setDate(diff));
+    // Move date back to monday
+    var monday = new Date(_today);
+    monday.setDate(monday.getDate() - day);
+
+    return monday;
 }
 Date.prototype.toWeekString = function() 
 {
@@ -173,7 +174,8 @@ if ('serviceWorker' in navigator) {
 const today = new Date();
 const weekStart = new Date(2025, 8, 22);
 const weekMax = 15; //? There's 16 weeks altogether so max index is 15
-var curWeekActual = DiffWeeks(GetMonday(today.getDay()), weekStart);
+var curWeekActual = DiffWeeks(GetMonday(today), weekStart);
+
 const curWeekDay = today.getDay();
 if(curWeekDay > 5 || curWeekDay == 0) { curWeekActual++; } //It's the weekend -> Skip to next week
 
