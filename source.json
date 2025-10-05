@@ -181,9 +181,9 @@
                     "Info": "👂 T2:D3-309",
                     "Start": 3,
                     "WeeksRequired": [0],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 11, 12, 15]
+                    "WeeksUnknown": []
                 }
             ]
         }
