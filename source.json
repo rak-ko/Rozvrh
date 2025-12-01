@@ -75,9 +75,9 @@
                     "Name": "Procedurální programování",
                     "Info": "👂 T2:D3-209",
                     "Start": 2,
-                    "WeeksRequired": [0],
-                    "WeeksStudying": [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 11, 12, 15],
-                    "WeeksNotRequired": [],
+                    "WeeksRequired": [0, 15],
+                    "WeeksStudying": [1, 2, 3, 4, 6, 7, 8],
+                    "WeeksNotRequired": [9, 10, 11, 11, 12],
                     "WeeksUnknown": []
                 }
             ]
