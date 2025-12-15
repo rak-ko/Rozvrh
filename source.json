@@ -89,9 +89,9 @@
                     "Name": "Procedurální programování",
                     "Info": "💼 ✏️ T2:A4-405",
                     "Start": 0,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 12],
                     "WeeksStudying": [],
-                    "WeeksNotRequired": [9, 10, 11, 11, 12, 15],
+                    "WeeksNotRequired": [9, 10, 11, 11, 15],
                     "WeeksUnknown": []
                 },
                 { 
@@ -157,9 +157,9 @@
                     "Name": "Datové sítě",
                     "Info": "💼 ✏️ T2:B3-703",
                     "Start": 3,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 15],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15],
                     "WeeksStudying": [],
-                    "WeeksNotRequired": [],
+                    "WeeksNotRequired": [12],
                     "WeeksUnknown": []
                 },
                 { 
