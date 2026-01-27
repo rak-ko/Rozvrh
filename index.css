@@ -53,7 +53,7 @@ body {
     text-align: center;
 }
 
-table {
+#timetable {
     min-width: 1200px;
     min-height: 260px;
     border-spacing: 6px;
@@ -62,10 +62,10 @@ table {
     border: 1.5px solid var(--table-border-color);
     background-color: var(--table-background-color);
 }
-table tr {
+#timetable tr {
     height: 52px;
 }
-table th, td {
+#timetable th, td {
     padding: 7px 7px;
     text-align: center;
 
@@ -115,6 +115,18 @@ table th, td {
 }
 .class:hover {
     filter: brightness(90%);
+}
+
+.overlapTd {
+    padding: 0px 0px;
+    /* max-width: 250px; */
+}
+.overlapTd table, .overlapTd tr, .overlapTd tbody {
+    max-width: 100%;
+    display: flex;
+}
+.overlapTd tr {
+    gap: 6px;
 }
 
 #classRequired {

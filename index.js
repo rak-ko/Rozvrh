@@ -32,6 +32,8 @@ async function Render(week)
             var renderedClass = false;
 
             //Class
+            var hasMultiple = classes.filter(x => x["Start"] == e).length > 1;
+            var toRender = hasMultiple ? "<td class=\"overlapTd\"><table><tr>" : "";
             for (let g = 0; g < classes.length; g++) {
                 const _class = classes[g];
                 if(_class["Start"] == e)
@@ -47,8 +49,7 @@ async function Render(week)
                         else if(notRequired) { id = "classNotRequired"; }
                         else if(unknown) { id = "classUnknown"; }
 
-                        // title="`+_class["Name"]+`"
-                        daysString += `<td id="`+id+`" class="timetableBorder class" title="`+ _class["Name"] +`">
+                        toRender += `<td id="`+id+`" class="timetableBorder class" title="`+ _class["Name"] +`">
                             <button onclick="alert('`+ _class["Name"] +`')">
                                 <p>`+ _class["Name"] +`</p>
                                 <p class="classInfo">`+ _class["Info"] +`</p>
@@ -58,6 +59,8 @@ async function Render(week)
                     }
                 }
             }
+            daysString += toRender;
+            if(hasMultiple) { daysString += "</tr></table></td>"; }
 
             //Empty cell
             if(!renderedClass) { daysString += "<td></td>"; }
@@ -84,7 +87,7 @@ function UpdateWeek(updateBy)
     Render(curWeek);
 }
 Number.prototype.clamp = function(min, max) {
-  return Math.min(Math.max(this, min), max);
+    return Math.min(Math.max(this, min), max);
 };
 function DiffWeeks(dt2, dt1) 
 {
@@ -161,19 +164,19 @@ function SetLightDarkMode(lightModeOn)
 }
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js')
-    .then((registration) => {
-      console.log('Service Worker registered with scope:', registration.scope);
+    navigator.serviceWorker.register('service-worker.js')
+        .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
     })
     .catch((error) => {
-      console.error('Service Worker registration failed:', error);
+        console.error('Service Worker registration failed:', error);
     });
 }
 
 //Get current week & hook up buttons
 const today = new Date();
-const weekStart = new Date(2025, 8, 22);
-const weekMax = 15; //? There's 16 weeks altogether so max index is 15
+const weekStart = new Date(2026, 1, 16);
+const weekMax = 13; //? There's 16 weeks altogether so max index is 15
 var curWeekActual = DiffWeeks(GetMonday(today), weekStart);
 
 const curWeekDay = today.getDay();
