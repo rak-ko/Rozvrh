@@ -1,6 +1,6 @@
 {
     "Hours" : [
-        "8:15 - 10:00",
+        "8:15 - 9:45",
         "9:15 - 10:45",
         "11:00 - 12:30",
         "12:45 - 14:15",
@@ -17,7 +17,7 @@
                     "Info": "👂 T2:D2-256",
                     "Start": 3,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
@@ -26,7 +26,7 @@
                     "Info": "👂 T2:D2-256",
                     "Start": 4,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
@@ -35,7 +35,7 @@
                     "Info": "👂 T2:D3-309",
                     "Start": 4,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 }
@@ -49,16 +49,16 @@
                     "Info": "👂 T2:D3-309",
                     "Start": 1,
                     "WeeksRequired": [],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+                    "WeeksUnknown": [0]
                 },
                 { 
                     "Name": "Programování",
                     "Info": "👂 T2:D3-209",
                     "Start": 2,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 }
@@ -72,7 +72,7 @@
                     "Info": "👂 T2:D2-256",
                     "Start": 1,
                     "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
@@ -81,15 +81,15 @@
                     "Info": "👂 T2:D3-209",
                     "Start": 2,
                     "WeeksRequired": [],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+                    "WeeksUnknown": [0]
                 },
                 { 
                     "Name": "Fyzika",
                     "Info": "💼 🧪 T2:A3-413b/d/414",
                     "Start": 3,
-                    "WeeksRequired": [1, 3, 5, 7, 9, 11, 13],
+                    "WeeksRequired": [1, 3, 5, 7, 9, 13],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -99,15 +99,15 @@
                     "Info": "👂 T2:D3-309",
                     "Start": 4,
                     "WeeksRequired": [],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+                    "WeeksUnknown": [0]
                 },
                 { 
                     "Name": "Fyzika",
                     "Info": "✏️ T2:C4-365",
                     "Start": 5,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -121,7 +121,7 @@
                     "Name": "Architektura počítačů",
                     "Info": "💼 🧪 KN:E-23",
                     "Start": 0,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -130,7 +130,7 @@
                     "Name": "Matematická analýza",
                     "Info": "💼 ✏️ T2:C4-78",
                     "Start": 2,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -139,7 +139,7 @@
                     "Name": "Elektrické obvody",
                     "Info": "💼 🧪 T2:C4-362",
                     "Start": 3,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -148,7 +148,7 @@
                     "Name": "Programování",
                     "Info": "💼 ✏️ T2:A4-405",
                     "Start": 4,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -157,7 +157,7 @@
                     "Name": "Diferenciální rovnice a numerika",
                     "Info": "💼 ✏️ T2:C2-83",
                     "Start": 5,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
