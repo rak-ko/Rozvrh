@@ -137,7 +137,7 @@
                 },
                 { 
                     "Name": "Elektrické obvody",
-                    "Info": "💼 🧪 T2:C4-362",
+                    "Info": "🧪 T2:C4-362",
                     "Start": 3,
                     "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
                     "WeeksStudying": [],
@@ -155,7 +155,7 @@
                 },
                 { 
                     "Name": "Diferenciální rovnice a numerika",
-                    "Info": "💼 ✏️ T2:C2-83",
+                    "Info": "💼 ✏️ T2:C2-85",
                     "Start": 5,
                     "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
                     "WeeksStudying": [],
