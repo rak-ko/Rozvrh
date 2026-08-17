@@ -13,8 +13,8 @@
             "Name" : "Monday",
             "Classes" : [
                 { 
-                    "Name": "Diferenciální rovnice a numerika",
-                    "Info": "👂 T2:D2-256",
+                    "Name": "Diskrétní matematika",
+                    "Info": "✏️ T2:D2-256",
                     "Start": 3,
                     "WeeksRequired": [],
                     "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
@@ -22,17 +22,8 @@
                     "WeeksUnknown": []
                 },
                 { 
-                    "Name": "Matematická analýza",
-                    "Info": "👂 T2:D2-256",
-                    "Start": 4,
-                    "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": []
-                },
-                { 
-                    "Name": "Architektura počítačů",
-                    "Info": "👂 T2:D3-309",
+                    "Name": "Programování",
+                    "Info": "✏️ T2:D2-256",
                     "Start": 4,
                     "WeeksRequired": [],
                     "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
@@ -45,7 +36,7 @@
             "Name" : "Tuesday",
             "Classes" : [
                 { 
-                    "Name": "Fyzika",
+                    "Name": "Algoritmizace",
                     "Info": "👂 T2:D3-309",
                     "Start": 1,
                     "WeeksRequired": [],
