@@ -49,8 +49,8 @@ async function Render(week)
                         else if(notRequired) { id = "classNotRequired"; }
                         else if(unknown) { id = "classUnknown"; }
 
-                        toRender += `<td id="`+id+`" class="timetableBorder class" title="`+ _class["Name"] +`">
-                            <button onclick="alert('`+ _class["Name"] +`')">
+                        toRender += `<td id="`+id+`" class="timetableBorder class" title="`+ _class["Name"] +` -> `+ _class["Info"] +`">
+                            <button onclick="alert('`+ _class["Name"] +` -> `+ _class["Info"] +`')">
                                 <p>`+ _class["Name"] +`</p>
                                 <p class="classInfo">`+ _class["Info"] +`</p>
                             </button>
@@ -160,7 +160,6 @@ function SetLightDarkMode(lightModeOn)
         document.documentElement.style.setProperty("--week-info-background-active", "rgb(37, 37, 37)");
     }
     isLightModeOn = lightModeOn;
-    localStorage.setItem("isLightModeOn", isLightModeOn);
 }
 
 if ('serviceWorker' in navigator) {
@@ -175,8 +174,8 @@ if ('serviceWorker' in navigator) {
 
 //Get current week & hook up buttons
 const today = new Date();
-const weekStart = new Date(2026, 1, 16);
-const weekMax = 13; //? There's 16 weeks altogether so max index is 15
+const weekStart = new Date(2026, 8, 21);
+const weekMax = 15; //? There's 16 weeks altogether so max index is 15
 var curWeekActual = DiffWeeks(GetMonday(today), weekStart);
 
 const curWeekDay = today.getDay();
@@ -191,8 +190,58 @@ document.getElementById("weekInfo").addEventListener("click", () => { UpdateWeek
 UpdateWeek(0);
 
 //Light/Dark mode switcher
-var isLightModeOn = (localStorage.getItem("isLightModeOn") === 'true');
-if(isLightModeOn == null) { isLightModeOn = true; }
-if(today.getHours() >= 17) { isLightModeOn = false; } // Auto light mode
-SetLightDarkMode(isLightModeOn);
+var isLightModeOn = true;
+getSunsetTime().then((sunset) => {
+    if(today.getHours() >= sunset) { isLightModeOn = false; } // Auto light mode
+    SetLightDarkMode(isLightModeOn);
+});
 document.getElementById("lightDarkModeSwitch").addEventListener("click", () => { SetLightDarkMode(!isLightModeOn); });
+
+//! This is partially AI generated slop:
+async function getSunsetTime() {
+    const DEFAULT_SUNSET = 17;
+    const CACHE_KEY = "sunsetCache";
+    function getPosition() {
+        return new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject);
+        });
+    }
+
+    // Check if online
+    if (!navigator.onLine) { return DEFAULT_SUNSET; }
+
+    // Try sunset API
+    try {
+        const position = await getPosition();
+        const { latitude, longitude } = position.coords;
+
+        const response = await fetch(`https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&formatted=0`);
+        if (!response.ok) { throw new Error("Bad response"); }
+
+        const data = await response.json();
+        const sunsetUTC = new Date(data.results.sunset);
+
+        // Cache it for offline use
+        const cacheData = {
+            sunset: sunsetUTC.toISOString(),
+            lat: latitude,
+            lng: longitude,
+            fetchedAt: Date.now()
+        };
+        localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData));
+
+        return sunsetUTC.getHours();
+
+    } catch (error) {
+        console.warn("Falling back to cached sunset time:", error.message);
+
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (cached) {
+            const parsed = JSON.parse(cached);
+            return new Date(parsed.sunset).getHours();
+        }
+
+        // No cache available — fall back to a default of 17:00 today
+        return DEFAULT_SUNSET;
+    }
+}

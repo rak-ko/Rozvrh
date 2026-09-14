@@ -14,19 +14,19 @@
             "Classes" : [
                 { 
                     "Name": "Diskrétní matematika",
-                    "Info": "✏️ T2:D2-256",
+                    "Info": "✏️ KN:A-404",
                     "Start": 3,
-                    "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15],
+                    "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
                 { 
                     "Name": "Programování",
-                    "Info": "✏️ T2:D2-256",
+                    "Info": "✏️ KN:E-310",
                     "Start": 4,
-                    "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
+                    "WeeksRequired": [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15],
+                    "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 }
@@ -37,21 +37,48 @@
             "Classes" : [
                 { 
                     "Name": "Algoritmizace",
-                    "Info": "👂 T2:D3-309",
+                    "Info": "👂 KN:A-214",
                     "Start": 1,
                     "WeeksRequired": [],
-                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": [0]
-                },
-                { 
-                    "Name": "Programování",
-                    "Info": "👂 T2:D3-209",
-                    "Start": 2,
-                    "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
+                },
+                { 
+                    "Name": "Řešení problémů a hry",
+                    "Info": "👂 KN:E-107",
+                    "Start": 1,
+                    "WeeksRequired": [],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+                    "WeeksNotRequired": [],
+                    "WeeksUnknown": []
+                },
+                { 
+                    "Name": "Operační systémy",
+                    "Info": "✏️ KN:A-424",
+                    "Start": 2,
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+                    "WeeksStudying": [],
+                    "WeeksNotRequired": [],
+                    "WeeksUnknown": []
+                },
+                { 
+                    "Name": "Algoritmizace",
+                    "Info": "✏️ KN:A-311",
+                    "Start": 3,
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+                    "WeeksStudying": [],
+                    "WeeksNotRequired": [],
+                    "WeeksUnknown": []
+                },
+                { 
+                    "Name": "Počítačové hry",
+                    "Info": "👂 KN:E-107",
+                    "Start": 4,
+                    "WeeksRequired": [],
+                    "WeeksStudying": [],
+                    "WeeksNotRequired": [],
+                    "WeeksUnknown": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15]
                 }
             ]
         },
@@ -59,46 +86,28 @@
             "Name" : "Wednesday",
             "Classes" : [
                 { 
-                    "Name": "Matematická analýza",
-                    "Info": "👂 T2:D2-256",
-                    "Start": 1,
-                    "WeeksRequired": [],
-                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": []
-                },
-                { 
-                    "Name": "Elektrické obvody",
-                    "Info": "👂 T2:D3-209",
+                    "Name": "Diskrétní matematika",
+                    "Info": "👂 T2:D3-309",
                     "Start": 2,
                     "WeeksRequired": [],
-                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": [0]
-                },
-                { 
-                    "Name": "Fyzika",
-                    "Info": "💼 🧪 T2:A3-413b/d/414",
-                    "Start": 3,
-                    "WeeksRequired": [1, 3, 5, 7, 9, 13],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 15],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
                 },
                 { 
-                    "Name": "Fyzika",
-                    "Info": "👂 T2:D3-309",
-                    "Start": 4,
+                    "Name": "Operační systémy",
+                    "Info": "👂 KN:A-214",
+                    "Start": 3,
                     "WeeksRequired": [],
-                    "WeeksStudying": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [0]
+                    "WeeksUnknown": []
                 },
                 { 
-                    "Name": "Fyzika",
-                    "Info": "✏️ T2:C4-365",
-                    "Start": 5,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13],
+                    "Name": "Počítačové hry",
+                    "Info": "✏️ KN:E-107",
+                    "Start": 6,
+                    "WeeksRequired": [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 15],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
                     "WeeksUnknown": []
@@ -109,56 +118,28 @@
             "Name" : "Thursday",
             "Classes" : [
                 { 
-                    "Name": "Architektura počítačů",
-                    "Info": "💼 🧪 KN:E-23",
-                    "Start": 0,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
-                    "WeeksStudying": [],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": []
-                },
-                { 
-                    "Name": "Matematická analýza",
-                    "Info": "💼 ✏️ T2:C4-78",
-                    "Start": 2,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
-                    "WeeksStudying": [],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": []
-                },
-                { 
-                    "Name": "Elektrické obvody",
-                    "Info": "🧪 T2:C4-362",
-                    "Start": 3,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
-                    "WeeksStudying": [],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": []
-                },
-                { 
                     "Name": "Programování",
-                    "Info": "💼 ✏️ T2:A4-405",
-                    "Start": 4,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
+                    "Info": "👂 KN:E-107",
+                    "Start": 3,
+                    "WeeksRequired": [],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": []
-                },
-                { 
-                    "Name": "Diferenciální rovnice a numerika",
-                    "Info": "💼 ✏️ T2:C2-85",
-                    "Start": 5,
-                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13],
-                    "WeeksStudying": [],
-                    "WeeksNotRequired": [],
-                    "WeeksUnknown": []
+                    "WeeksUnknown": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15]
                 }
             ]
         },
         {
             "Name" : "Friday",
             "Classes" : [
-
+                { 
+                    "Name": "Řešení problémů a hry",
+                    "Info": "✏️ KN:E-230",
+                    "Start": 0,
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
+                    "WeeksStudying": [],
+                    "WeeksNotRequired": [],
+                    "WeeksUnknown": []
+                }
             ]
         }
     ]

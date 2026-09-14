@@ -85,6 +85,7 @@ body {
     padding: 0px 0px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
     transition: 0.05s filter ease-out;
+    max-width: 50%;
 }
 .class button {
     background: none;
