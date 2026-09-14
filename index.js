@@ -190,6 +190,7 @@ document.getElementById("weekInfo").addEventListener("click", () => { UpdateWeek
 UpdateWeek(0);
 
 //Light/Dark mode switcher
+SetLightDarkMode(true);
 var isLightModeOn = true;
 getSunsetTime().then((sunset) => {
     if(today.getHours() >= sunset) { isLightModeOn = false; } // Auto light mode
