@@ -75,10 +75,10 @@
                     "Name": "Počítačové hry",
                     "Info": "👂 KN:E-107",
                     "Start": 4,
-                    "WeeksRequired": [],
+                    "WeeksRequired": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15],
                     "WeeksStudying": [],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15]
+                    "WeeksUnknown": []
                 }
             ]
         },
@@ -122,9 +122,9 @@
                     "Info": "👂 KN:E-107",
                     "Start": 3,
                     "WeeksRequired": [],
-                    "WeeksStudying": [],
+                    "WeeksStudying": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15],
                     "WeeksNotRequired": [],
-                    "WeeksUnknown": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15]
+                    "WeeksUnknown": []
                 }
             ]
         },
